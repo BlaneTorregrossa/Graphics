@@ -117,12 +117,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="gl_core_4_4.c" />
     <ClCompile Include="InheritanceApp.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="gl_core_4_4.h" />
     <ClInclude Include="InheritanceApp.h" />
   </ItemGroup>

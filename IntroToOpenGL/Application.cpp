@@ -3,6 +3,8 @@
 #include <glfw-3.2.1.bin.WIN32\include\GLFW\glfw3.h>
 #include <glm\glm\glm.hpp>
 
+
+
 #include <iostream>
 //includes for information from other header files and thirdparty librarys
 
@@ -54,7 +56,15 @@ void Application::run(const char * title, unsigned int width, unsigned int heigh
 		prevTime = currTime; // Updates prevTime
 		glfwPollEvents(); // processes all events
 		glfwSwapBuffers(m_window); // Swaps the front and back buffers of the window
-		
 	}
 
 }
+
+void Application::startup()
+{
+}
+
+void Application::shutdown()
+{
+}
+
