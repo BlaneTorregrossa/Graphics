@@ -1,8 +1,5 @@
-﻿  main.cpp
-  Camera.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  InheritanceApp.cpp
-  Application.cpp
-  IntroToOpenGL.vcxproj -> C:\Users\s178064\Documents\GitHub\Graphics\Debug\IntroToOpenGL.exe
-  IntroToOpenGL.vcxproj -> C:\Users\s178064\Documents\GitHub\Graphics\Debug\IntroToOpenGL.pdb (Partial PDB)
+﻿LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+CameraApp.obj : error LNK2019: unresolved external symbol "public: static void __cdecl Gizmos::create(unsigned int,unsigned int,unsigned int,unsigned int)" (?create@Gizmos@@SAXIIII@Z) referenced in function "public: void __thiscall CameraApp::startup(void)" (?startup@CameraApp@@QAEXXZ)
+CameraApp.obj : error LNK2019: unresolved external symbol "public: static void __cdecl Gizmos::addTransform(struct glm::tmat4x4<float,0> const &,float)" (?addTransform@Gizmos@@SAXABU?$tmat4x4@M$0A@@glm@@M@Z) referenced in function "public: void __thiscall CameraApp::draw(void)" (?draw@CameraApp@@QAEXXZ)
+CameraApp.obj : error LNK2019: unresolved external symbol "public: static void __cdecl Gizmos::addSphere(struct glm::tvec3<float,0> const &,float,int,int,struct glm::tvec4<float,0> const &,struct glm::tmat4x4<float,0> const *,float,float,float,float)" (?addSphere@Gizmos@@SAXABU?$tvec3@M$0A@@glm@@MHHABU?$tvec4@M$0A@@3@PBU?$tmat4x4@M$0A@@3@MMMM@Z) referenced in function "public: void __thiscall CameraApp::draw(void)" (?draw@CameraApp@@QAEXXZ)
+C:\Users\Blane\Documents\Visual Studio 2015\Projects\IntroToOpenGL\Debug\IntroToOpenGL.exe : fatal error LNK1120: 3 unresolved externals

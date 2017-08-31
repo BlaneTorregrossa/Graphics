@@ -6,7 +6,7 @@ class InheritanceApp : public Application // class that this is being inherited
 {
 public:
 	InheritanceApp();  //constructor for class
-	~InheritanceApp(); //destructor for class
+	virtual ~InheritanceApp(); //destructor for class
 
 
 private: 
