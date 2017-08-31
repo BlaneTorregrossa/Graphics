@@ -17,6 +17,13 @@ protected:
 	virtual void update(float) = 0; // update function
 	virtual void draw() = 0;
 
+	//// vertex and index buffers (for generating geometry)
+	//unsigned int m_VAO;
+	//unsigned int m_VBO;
+	//unsigned int m_IBO;
+	//unsigned int m_programID;
+
+
 	GLFWwindow* m_window; // to refer to the window
 	bool m_check; // check for loop statement.
 
