@@ -1,12 +1,18 @@
 #pragma once
+#include "gl_core_4_4.h"
+#include "Mesh.h"
+#include <stdio.h>
 #include <glm\glm.hpp>
+#include <glm\gtc\type_ptr.hpp> // This is for use of glm::value_ptr
 
-struct Vertex
-{
-	glm::vec4 position;
-	glm::vec4 colour;
-	// will contain vec4 UV later on and other variables
-};
+using namespace glm;
+
+//struct Vertex
+//{
+//	vec4 position;
+//	vec4 colour;
+//	// will contain vec4 UV later on and other such variables
+//};
 
 class RenderingApp
 {
@@ -19,13 +25,19 @@ public:
 
 protected:
 	// vertex and index buffers (for generating geometry)
-	unsigned int m_VAO;
-	unsigned int m_VBO;
-	unsigned int m_IBO;
+	unsigned int m_vao;
+	unsigned int m_vbo;
+	unsigned int m_ibo;
 
 	unsigned int m_programID;
 
-	unsigned int m_projectionViewMatrix;
+	mat4 m_projectionViewMatrix = mat4
+	{
+		vec4(0, 0, 0, 0),
+		vec4(0, 0, 0, 0),
+		vec4(0, 0, 0, 0),
+		vec4(0, 0, 0, 0)
+	};
 
 	unsigned int m_rows;
 	unsigned int m_columns;

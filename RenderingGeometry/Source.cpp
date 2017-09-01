@@ -1,9 +1,11 @@
 #include "RenderingApp.h"
+#include "Mesh.h"
 #include <iostream>
 
 int main()
 {
-	RenderingApp* app = new RenderingApp();
-	app->generateGrid(5, 5);
+	Mesh* app = new Mesh();
+	app->~Mesh();
+	app->Create_buffers();
 	return 1;
 }
