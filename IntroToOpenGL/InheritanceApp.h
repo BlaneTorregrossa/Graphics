@@ -6,10 +6,7 @@ class InheritanceApp : public Application // class that this is being inherited
 {
 public:
 	InheritanceApp();  //constructor for class
-	virtual ~InheritanceApp(); //destructor for class
-
-
-private: 
+	~InheritanceApp(); //destructor for class
 
 	virtual void update(float) override; // update function
 	virtual void run(const char* title, unsigned int width, unsigned int height, bool fullscreen); // function for the application running

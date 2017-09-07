@@ -12,8 +12,8 @@ public:
 	virtual void run(const char* title, unsigned int width, unsigned int height, bool fullscreen); //function for running application
 
 protected:
-	virtual void startup();
-	virtual void shutdown();
+	virtual void startup() = 0;
+	virtual void shutdown() = 0;
 	virtual void update(float) = 0; // update function
 	virtual void draw() = 0;
 
