@@ -1,8 +1,6 @@
 #include "bootApplication.h"
 #include "gl_core_4_4.h"
 #include <glfw-3.2.1.bin.WIN32\include\GLFW\glfw3.h>
-#include <glm\glm.hpp>
-
 
 #include <iostream>
 //includes for information from other header files and thirdparty librarys
@@ -53,9 +51,6 @@ void bootApplication::run(const char * title, unsigned int width, unsigned int h
 		deltaTime = currTime - prevTime;  // deltaTime set to equal the change of time between current time and the previous time
 		prevTime = currTime; // Updates prevTime
 
-		update(deltaTime);
-		draw();
-
 		glfwPollEvents(); // processes all events
 		glfwSwapBuffers(m_window); // Swaps the front and back buffers of the window
 	}
@@ -63,13 +58,6 @@ void bootApplication::run(const char * title, unsigned int width, unsigned int h
 
 	glfwDestroyWindow(m_window);
 	glfwTerminate();
-}
 
-void bootApplication::startup()
-{
+	return;
 }
-
-void bootApplication::shutdown()
-{
-}
-

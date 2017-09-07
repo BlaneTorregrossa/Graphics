@@ -1,4 +1,5 @@
 #pragma once
+#include "bootApplication.h" // from bootstrap
 #include "gl_core_4_4.h"
 #include "Mesh.h"
 #include <stdio.h>
@@ -6,13 +7,6 @@
 #include <glm\gtc\type_ptr.hpp> // This is for use of glm::value_ptr
 
 using namespace glm;
-
-//struct Vertex
-//{
-//	vec4 position;
-//	vec4 colour;
-//	// will contain vec4 UV later on and other such variables
-//};
 
 class RenderingApp
 {
