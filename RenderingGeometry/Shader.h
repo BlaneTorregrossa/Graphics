@@ -11,7 +11,6 @@
 #include <glm/gtc/type_ptr.hpp>
 // includes from elsewhere in the project and third party libraries
 
-using namespace glm; // Removes need to type the glm namespace before evrey vector
 
 class Shader
 {
@@ -35,12 +34,12 @@ private:
 	unsigned int vertexShader;		// vertexShader 
 	unsigned int fragmentShader;	// fragmentShader
 
-	mat4 m_projectionViewMatrix = mat4	// a temporrary solution
+	glm::mat4 m_projectionViewMatrix = glm::mat4	// a temporrary solution
 	{
-		vec4(0, 0, 0, 0),
-		vec4(0, 0, 0, 0),
-		vec4(0, 0, 0, 0),
-		vec4(0, 0, 0, 0)
+		glm::vec4(0, 0, 0, 0),
+		glm::vec4(0, 0, 0, 0),
+		glm::vec4(0, 0, 0, 0),
+		glm::vec4(0, 0, 0, 0)
 	};
 
 };

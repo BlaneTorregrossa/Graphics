@@ -6,7 +6,7 @@
 #include <glm\glm.hpp>
 #include <glm\gtc\type_ptr.hpp> // This is for use of glm::value_ptr
 
-using namespace glm;
+using namespace std;
 
 class RenderingApp
 {
@@ -15,8 +15,13 @@ public:
 	virtual ~RenderingApp();
 
 	void generateGrid(unsigned int m_rows, unsigned int m_columns);
-	void tempStartup();
-
+	void genPlane();
+	void genCube();
+	/*
+	///Causing problems
+	std::vector<glm::vec4> genHalfCircle(unsigned int radius, unsigned int np);
+	std::vector<glm::vec4> rotatePoints(unsigned int points, std::vector<glm::vec4> nm);
+	*/
 protected:
 	// vertex and index buffers (for generating geometry)
 	unsigned int m_vao;
@@ -25,12 +30,12 @@ protected:
 
 	unsigned int m_programID;
 
-	mat4 m_projectionViewMatrix = mat4
+	glm::mat4 m_projectionViewMatrix = glm::mat4
 	{
-		vec4(0, 0, 0, 0),
-		vec4(0, 0, 0, 0),
-		vec4(0, 0, 0, 0),
-		vec4(0, 0, 0, 0)
+		glm::vec4(0, 0, 0, 0),
+		glm::vec4(0, 0, 0, 0),
+		glm::vec4(0, 0, 0, 0),
+		glm::vec4(0, 0, 0, 0)
 	};
 
 	unsigned int m_rows;

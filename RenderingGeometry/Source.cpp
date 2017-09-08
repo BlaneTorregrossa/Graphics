@@ -10,9 +10,7 @@
 
 int main()
 {
-	bootApplication* app = new bootApplication();
-	app->run("Rendering Test", 800, 800, nullptr);
-	/*Mesh* app = new Mesh();
-	app->generateGrid(5, 5);*/
+	auto app = new Mesh();
+	app->Create_buffers();
 	return 1;
 }
