@@ -45,33 +45,12 @@ void RenderingApp::generateGrid(unsigned int rows, unsigned int cols)
 
 void RenderingApp::genPlane()
 {
-	Vertex A = { glm::vec4(-1, 0, 0, 1), glm::vec4(.5f, .5f, .5f, 1) };
-	Vertex B = { glm::vec4(0, 0, 0, 1), glm::vec4(.5f, .5f, .5f, 1) };
-	Vertex C = { glm::vec4(-1, 1, 0, 1), glm::vec4(.5f, .5f, .5f, 1) };
-	Vertex D = { glm::vec4(0, 1, 0, 1), glm::vec4(.5f, .5f, .5f, 1) };
 
-	std::vector<Vertex> verticies{ A, B, C, D };
-	std::vector<unsigned int> indicies{ 0, 1, 2, 0, 2, 3 };
 }
 
 void RenderingApp::genCube()
 {
-	Vertex A = { glm::vec4(-1, 0, 0, 1), glm::vec4(.5f, .5f, .5f, 1) };
-	Vertex B = { glm::vec4(0, 0, 0, 1), glm::vec4(.5f, .5f, .5f, 1) };
-	Vertex C = { glm::vec4(-1, 1, 0, 1), glm::vec4(.5f, .5f, .5f, 1) };
-	Vertex D = { glm::vec4(0, 1, 0, 1), glm::vec4(.5f, .5f, .5f, 1) };
-	Vertex E = { glm::vec4(-1, 0, -1, 1), glm::vec4(.5f, .5f, .5f, 1) };
-	Vertex F = { glm::vec4(0, 0, -1, 1), glm::vec4(.5f, .5f, .5f, .5f) };
-	Vertex G = { glm::vec4(-1, 1, -1, 1), glm::vec4(.5f, .5f, .5f, 1) };
-	Vertex H = { glm::vec4(0, 1, -1, 1), glm::vec4(.5f, .5f, .5f, 1) };
 
-	std::vector<Vertex> verticies{ A, B, C, D, E, F, G, H };
-	std::vector<unsigned int> indicies{ 0, 1, 2, 0, 2, 3, /*resets starting index ,*/ 
-										0, 1, 4, 0, 4, 5, /*resets starting index ,*/ 
-										4, 5, 6, 4, 6, 7, /*resets starting index ,*/ 
-										6, 7, 2, 6, 2, 3, /*resets starting index ,*/ 
-										6, 2, 0, 6, 0, 7, /*resets starting index ,*/ 
-										5, 1, 3, 5, 3, 7};
 }
 
 

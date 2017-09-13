@@ -7,8 +7,8 @@
 
 #include <stdio.h>
 #include <vector>
-#include <glm\glm.hpp>
-#include <glm/gtc/type_ptr.hpp>
+#include <glm.hpp>
+#include <gtc/type_ptr.hpp>
 // includes from elsewhere in the project and third party libraries
 
 
@@ -29,7 +29,6 @@ public:
 	const char* fsSource;	//Fragment Shader
 
 private:
-	unsigned int m_program;			// member variable for the program
 	unsigned int success;			// a check for a loop
 	unsigned int vertexShader;		// vertexShader 
 	unsigned int fragmentShader;	// fragmentShader

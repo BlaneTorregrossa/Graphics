@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RenderingGeometry", "Render
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bootstrap", "bootstrap\bootstrap.vcxproj", "{C8110A17-4B14-4547-A76C-EDFF1F9E6A66}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CameraAndProjection", "CameraAndProjection\CameraAndProjection.vcxproj", "{D758EE9A-723C-47A4-A1C3-EB7635B067FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{C8110A17-4B14-4547-A76C-EDFF1F9E6A66}.Release|x64.Build.0 = Release|x64
 		{C8110A17-4B14-4547-A76C-EDFF1F9E6A66}.Release|x86.ActiveCfg = Release|Win32
 		{C8110A17-4B14-4547-A76C-EDFF1F9E6A66}.Release|x86.Build.0 = Release|Win32
+		{D758EE9A-723C-47A4-A1C3-EB7635B067FB}.Debug|x64.ActiveCfg = Debug|x64
+		{D758EE9A-723C-47A4-A1C3-EB7635B067FB}.Debug|x64.Build.0 = Debug|x64
+		{D758EE9A-723C-47A4-A1C3-EB7635B067FB}.Debug|x86.ActiveCfg = Debug|Win32
+		{D758EE9A-723C-47A4-A1C3-EB7635B067FB}.Debug|x86.Build.0 = Debug|Win32
+		{D758EE9A-723C-47A4-A1C3-EB7635B067FB}.Release|x64.ActiveCfg = Release|x64
+		{D758EE9A-723C-47A4-A1C3-EB7635B067FB}.Release|x64.Build.0 = Release|x64
+		{D758EE9A-723C-47A4-A1C3-EB7635B067FB}.Release|x86.ActiveCfg = Release|Win32
+		{D758EE9A-723C-47A4-A1C3-EB7635B067FB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

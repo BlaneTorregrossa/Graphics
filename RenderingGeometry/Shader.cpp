@@ -1,7 +1,6 @@
 #include "Shader.h"
 
 
-
 Shader::Shader()
 {
 }
@@ -64,8 +63,5 @@ void Shader::attach()
 
 unsigned int Shader::getUniform(const char *)
 {
-	glUseProgram(m_program);
-	unsigned int projectionViewUniform = glGetUniformLocation(m_program, "projectionViewWorldMatrix");
-	glUniformMatrix4fv(projectionViewUniform, 1, false, value_ptr(m_projectionViewMatrix));
-	return projectionViewUniform;
+
 }
