@@ -1,7 +1,7 @@
 #include "Application.h"
 #include "gl_core_4_4.h"
-#include <glfw-3.2.1.bin.WIN32\include\GLFW\glfw3.h>
-#include <glm\glm.hpp>
+#include <glfw3.h>
+#include <glm.hpp>
 
 
 #include <iostream>

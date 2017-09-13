@@ -10,6 +10,7 @@
 
 int main()
 {
-	
+	bootApplication* app = new RenderingApp();
+	app->run("Rendering shapes", 800, 800, false);
 	return 1;
 }

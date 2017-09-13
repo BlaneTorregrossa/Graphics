@@ -12,7 +12,7 @@
 // includes from elsewhere in the project and third party libraries
 
 
-class Shader
+class Shader : Mesh
 {
 public:
 	Shader();

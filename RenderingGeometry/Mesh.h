@@ -2,7 +2,6 @@
 #include "bootApplication.h"	//calls bootstrap header file
 
 #include "RenderingApp.h"
-#include "Shader.h"
 #include "gl_core_4_4.h"
 
 #include <stdio.h>
@@ -22,10 +21,8 @@ class Mesh
 public:
 	Mesh();
 	~Mesh();
-
 	void Create_buffers();	// creates buffer for the mesh
-	void initialize(vector<Vertex>&verts, vector<unsigned int>&indices);
-
+	void initialize(std::vector<Vertex>&verts, std::vector<unsigned int>&indices);
 	void bind();		//bind array and vertex buffers
 	void unbind();		//unbind array and vertex buffers
 	void draw(GLuint);

@@ -3,12 +3,10 @@
 #include "gl_core_4_4.h"
 #include "Mesh.h"
 #include <stdio.h>
-#include <glm\glm.hpp>
-#include <glm\gtc\type_ptr.hpp> // This is for use of glm::value_ptr
+#include <glm.hpp>
+#include <gtc\type_ptr.hpp> // This is for use of glm::value_ptr
 
-using namespace std;
-
-class RenderingApp
+class RenderingApp : public bootApplication
 {
 public:
 	RenderingApp();

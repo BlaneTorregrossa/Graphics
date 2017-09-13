@@ -1,8 +1,7 @@
 #pragma once
 #include "Application.h"
-#include "Gizmos.h"
 #include "gl_core_4_4.h"
-#include <glfw-3.2.1.bin.WIN32\include\GLFW\glfw3.h>
+#include <glfw3.h>
 #include <cstdio>
 //Third party libraries and the application header made previously
 

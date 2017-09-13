@@ -63,5 +63,5 @@ void Shader::attach()
 
 unsigned int Shader::getUniform(const char *)
 {
-
+	return 0;
 }

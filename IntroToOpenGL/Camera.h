@@ -1,8 +1,8 @@
 #pragma once
-#include <glm\glm.hpp>
+#include <glm.hpp>
 #include <assert.h>
 #include<stdio.h>
-#include <glm\ext.hpp>
+#include <ext.hpp>
 // includes from thirdparty libraries
 
 // Class for camera to set orthographic view, perspective view, lookat, and set position
