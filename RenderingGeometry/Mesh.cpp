@@ -64,7 +64,7 @@ void Mesh::bind()
 
 	//glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 	//glBufferData(GL_ARRAY_BUFFER, m_verticies.size() * sizeof(Vertex), m_verticies.data(), GL_STATIC_DRAW);
-	//
+	
 	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
 	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_indicies.size() * sizeof(unsigned int), m_indicies.data(), GL_STATIC_DRAW);
 

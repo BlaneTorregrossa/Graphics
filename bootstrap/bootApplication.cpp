@@ -1,6 +1,6 @@
 #include "bootApplication.h"
 #include "gl_core_4_4.h"
-#include <glfw-3.2.1.bin.WIN32\include\GLFW\glfw3.h>
+#include <GLFW\include\GLFW\glfw3.h>
 
 #include <iostream>
 //includes for information from other header files and thirdparty librarys
@@ -25,7 +25,8 @@ void bootApplication::run(const char * title, unsigned int width, unsigned int h
 		return; // Terminate program
 	}
 
-	m_window = glfwCreateWindow(width, height, title, nullptr, nullptr); // Creates the application window
+	GLFWmonitor* monitor = (fullscreen) ? glfwGetPrimaryMonitor() : nullptr;
+	m_window = glfwCreateWindow(width, height, title, monitor, nullptr); // Creates the application window
 
 	glfwMakeContextCurrent(m_window); // Gives/Makes the context of m_window current for calling
 
@@ -35,16 +36,16 @@ void bootApplication::run(const char * title, unsigned int width, unsigned int h
 		return; //Terminate program
 	}
 
-	double prevTime = glfwGetTime(); // Sets prevTime to return the value of the GLFW timer
-	double currTime = 0;
-	double deltaTime = 0;
+	float prevTime = glfwGetTime(); // Sets prevTime to return the value of the GLFW timer
+	float currTime = 0;
+	float deltaTime = 0;
 
 	while (!m_check) // loop could be set better
 	{
 		glEnable(GL_DEPTH_TEST);
 		glClearColor(0.12f, 0.12f, 0.30f, 1.0f); // Sets a "Background" color
 
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clears the window
+		glClear(GL_COLOR_BUFFER_BIT | GL_STENCIL_BUFFER_BIT); // Clears the window
 
 		currTime = glfwGetTime();  // Sets currTime to return the value of the GLFW timer
 		deltaTime = currTime - prevTime;  // deltaTime set to equal the change of time between current time and the previous time
@@ -53,9 +54,4 @@ void bootApplication::run(const char * title, unsigned int width, unsigned int h
 		glfwPollEvents(); // processes all events
 		glfwSwapBuffers(m_window); // Swaps the front and back buffers of the window
 	}
-
-	glfwTerminate();
-	glfwDestroyWindow(m_window);
-
-	return;
 }

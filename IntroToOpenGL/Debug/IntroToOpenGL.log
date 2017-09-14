@@ -1,8 +1,4 @@
-﻿  CameraApp.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  main.cpp
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-bootstrap.lib(bootApplication.obj) : warning LNK4099: PDB 'bootstrap.pdb' was not found with 'bootstrap.lib(bootApplication.obj)' or at 'C:\Users\Blane\Documents\Visual Studio 2015\Projects\IntroToOpenGL\Debug\bootstrap.pdb'; linking object as if no debug info
-  IntroToOpenGL.vcxproj -> C:\Users\Blane\Documents\Visual Studio 2015\Projects\IntroToOpenGL\Debug\IntroToOpenGL.exe
-  IntroToOpenGL.vcxproj -> C:\Users\Blane\Documents\Visual Studio 2015\Projects\IntroToOpenGL\Debug\IntroToOpenGL.pdb (Partial PDB)
+﻿  main.cpp
+cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+  IntroToOpenGL.vcxproj -> C:\Users\s178064\Documents\GitHub\Graphics\Debug\IntroToOpenGL.exe
+  IntroToOpenGL.vcxproj -> C:\Users\s178064\Documents\GitHub\Graphics\Debug\IntroToOpenGL.pdb (Partial PDB)

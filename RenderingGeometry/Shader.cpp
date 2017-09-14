@@ -15,6 +15,7 @@ void Shader::startup()
 	success = GL_FALSE;
 	vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+	m_program = glCreateProgram();
 }
 
 void Shader::bind()
@@ -40,25 +41,23 @@ void Shader::unbind()
 
 void Shader::defaultLoad()
 {
-	
+	glLinkProgram(m_program);
 }
 
 void Shader::load(const char * filename, unsigned int type)
 {
 
-}
-
-void Shader::attach()
-{
-	m_program = glCreateProgram();
-	glAttachShader(m_program, vertexShader);
-	glAttachShader(m_program, fragmentShader);
-	glLinkProgram(m_program);
-
 	glShaderSource(vertexShader, 1, (const char**)&vsSource, 0);
 	glCompileShader(vertexShader);
 	glShaderSource(fragmentShader, 1, (const char**)&fsSource, 0);
 	glCompileShader(fragmentShader);
+}
+
+void Shader::attach()
+{
+	glAttachShader(m_program, vertexShader);
+	glAttachShader(m_program, fragmentShader);
+
 }
 
 unsigned int Shader::getUniform(const char *)
