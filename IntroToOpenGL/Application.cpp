@@ -33,7 +33,8 @@ void Application::run(const char * title, unsigned int width, unsigned int heigh
 
 	if (ogl_LoadFunctions() == ogl_LOAD_FAILED) //Load OpenGL functions and if it can't the program is terminated.
 	{
-		shutdown(); // Runs shutdown function
+		glfwDestroyWindow(m_window);
+		glfwTerminate();
 		return; //Terminate program
 	}
 
@@ -59,7 +60,6 @@ void Application::run(const char * title, unsigned int width, unsigned int heigh
 		glfwPollEvents(); // processes all events
 		glfwSwapBuffers(m_window); // Swaps the front and back buffers of the window
 	}
-
 
 	glfwDestroyWindow(m_window);
 	glfwTerminate();

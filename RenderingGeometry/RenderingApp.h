@@ -28,14 +28,6 @@ protected:
 
 	unsigned int m_programID;
 
-	glm::mat4 m_projectionViewMatrix = glm::mat4
-	{
-		glm::vec4(0, 0, 0, 0),
-		glm::vec4(0, 0, 0, 0),
-		glm::vec4(0, 0, 0, 0),
-		glm::vec4(0, 0, 0, 0)
-	};
-
 	unsigned int m_rows;
 	unsigned int m_columns;
 };

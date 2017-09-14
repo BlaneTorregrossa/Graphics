@@ -32,14 +32,5 @@ private:
 	unsigned int success;			// a check for a loop
 	unsigned int vertexShader;		// vertexShader 
 	unsigned int fragmentShader;	// fragmentShader
-
-	glm::mat4 m_projectionViewMatrix = glm::mat4	// a temporrary solution
-	{
-		glm::vec4(0, 0, 0, 0),
-		glm::vec4(0, 0, 0, 0),
-		glm::vec4(0, 0, 0, 0),
-		glm::vec4(0, 0, 0, 0)
-	};
-
 };
 

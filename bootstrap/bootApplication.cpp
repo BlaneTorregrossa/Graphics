@@ -32,18 +32,20 @@ void bootApplication::run(const char * title, unsigned int width, unsigned int h
 
 	if (ogl_LoadFunctions() == ogl_LOAD_FAILED) //Load OpenGL functions and if it can't the program is terminated.
 	{
-		shutdown(); // Runs shutdown function
+		glfwDestroyWindow(m_window);
+		glfwTerminate();
 		return; //Terminate program
 	}
 
-	float prevTime = glfwGetTime(); // Sets prevTime to return the value of the GLFW timer
-	float currTime = 0;
-	float deltaTime = 0;
+	glClearColor(0.12f, 0.12f, 0.30f, 1.0f); // Sets a "Background" color
+
+	double prevTime = glfwGetTime(); // Sets prevTime to return the value of the GLFW timer
+	double currTime = 0;
+	double deltaTime = 0;
 
 	while (!m_check) // loop could be set better
 	{
-		glEnable(GL_DEPTH_TEST);
-		glClearColor(0.12f, 0.12f, 0.30f, 1.0f); // Sets a "Background" color
+		//glEnable(GL_DEPTH_TEST);
 
 		glClear(GL_COLOR_BUFFER_BIT | GL_STENCIL_BUFFER_BIT); // Clears the window
 
@@ -54,4 +56,7 @@ void bootApplication::run(const char * title, unsigned int width, unsigned int h
 		glfwPollEvents(); // processes all events
 		glfwSwapBuffers(m_window); // Swaps the front and back buffers of the window
 	}
+	//glfwDestroyWindow(m_window);
+	//glfwTerminate();
+	//return;
 }
