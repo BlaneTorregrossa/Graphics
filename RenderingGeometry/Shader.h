@@ -12,19 +12,22 @@
 // includes from elsewhere in the project and third party libraries
 
 
-class Shader : Mesh
+class Shader
 {
 public:
 	Shader();
 	~Shader();
-	void startup();		//startup assginments to variables
+	void startup();		
+	void shutdown();
+	void update(float);
+	void draw();
 	void bind();		
 	void unbind();
 	void defaultLoad();
 	void load(const char * filename, unsigned int type);
 	void attach();		//attatchment of the shaders to the program
 	unsigned int getUniform(const char *);
-
+	unsigned int m_program;
 	const char* vsSource;	//Vertex Shader
 	const char* fsSource;	//Fragment Shader
 

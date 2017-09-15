@@ -11,6 +11,7 @@ RenderingApp::~RenderingApp()
 {
 }
 
+//*
 void RenderingApp::generateGrid(unsigned int rows, unsigned int cols)
 {
 	unsigned int* auiIndices = new unsigned int[(rows - 1) * (cols - 1) * 6];
@@ -42,17 +43,4 @@ void RenderingApp::generateGrid(unsigned int rows, unsigned int cols)
 		}
 	}
 }
-
-void RenderingApp::genPlane()
-{
-
-}
-
-void RenderingApp::genCube()
-{
-
-}
-
-
-
 

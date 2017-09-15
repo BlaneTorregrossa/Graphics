@@ -7,10 +7,12 @@
 #include <glm.hpp>
 #include <stdio.h>
 #include <iostream>
+// NO ADDITIONAL CODE BEYOND THIS---------------------------------
+
 
 int main()
 {
 	bootApplication* app = new RenderingApp();
-	app->run("Rendering shapes", 800, 800, false);
+	app->run("Rendering shapes", 1280, 720, false);
 	return 1;
 }

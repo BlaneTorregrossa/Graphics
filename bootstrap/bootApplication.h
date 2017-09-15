@@ -13,8 +13,8 @@ public:
 protected:
 	void startup();
 	void shutdown();
-	//void update(float);
-	//void draw();
+	void update(float);
+	void draw();
 
 	GLFWwindow* m_window; // to refer to the window
 	bool m_check; // check for loop statement.

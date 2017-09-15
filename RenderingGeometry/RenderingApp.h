@@ -13,13 +13,11 @@ public:
 	virtual ~RenderingApp();
 
 	void generateGrid(unsigned int m_rows, unsigned int m_columns);
-	void genPlane();
-	void genCube();
-	/*
-	///Causing problems
-	std::vector<glm::vec4> genHalfCircle(unsigned int radius, unsigned int np);
-	std::vector<glm::vec4> rotatePoints(unsigned int points, std::vector<glm::vec4> nm);
-	*/
+	void startup();
+	void shutdown();
+	void update(float);
+	void draw();
+
 protected:
 	// vertex and index buffers (for generating geometry)
 	unsigned int m_vao;

@@ -25,10 +25,12 @@ public:
 	void initialize(std::vector<Vertex>&verts, std::vector<unsigned int>&indices);
 	void bind();		//bind array and vertex buffers
 	void unbind();		//unbind array and vertex buffers
+	void startup();
+	void shutdown();
+	void update(float);
 	void draw(GLuint);
 	unsigned int index_Count;		
 	unsigned int vertex_Count;	
-	unsigned int m_program;
 
 private:
 	unsigned int m_vao;

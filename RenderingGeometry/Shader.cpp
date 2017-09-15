@@ -10,15 +10,39 @@ Shader::~Shader()
 {
 }
 
+//*
 void Shader::startup()
 {
-	success = GL_FALSE;
+	//success = GL_FALSE;
 	vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 	m_program = glCreateProgram();
 }
 
+void Shader::shutdown()
+{
+}
+
+void Shader::update(float)
+{
+}
+
+void Shader::draw()
+{
+}
+
 void Shader::bind()
+{
+	glLinkProgram(m_program);
+}
+
+void Shader::unbind()
+{
+	glLinkProgram(0);
+}
+
+//*
+void Shader::defaultLoad()
 {
 	vsSource = "#version 410\n \
 				layout(location=0) in vec4 position; \
@@ -31,35 +55,28 @@ void Shader::bind()
 				in vec4 vColour; \
 				out vec4 fragColor; \
 				void main() { fragColor = vColour; }";
-}
 
-void Shader::unbind()
-{
 	glDeleteShader(fragmentShader);
 	glDeleteShader(vertexShader);
 }
 
-void Shader::defaultLoad()
-{
-	glLinkProgram(m_program);
-}
-
+//*
 void Shader::load(const char * filename, unsigned int type)
 {
-
 	glShaderSource(vertexShader, 1, (const char**)&vsSource, 0);
 	glCompileShader(vertexShader);
 	glShaderSource(fragmentShader, 1, (const char**)&fsSource, 0);
 	glCompileShader(fragmentShader);
 }
 
+//*
 void Shader::attach()
 {
 	glAttachShader(m_program, vertexShader);
 	glAttachShader(m_program, fragmentShader);
-
 }
 
+//*
 unsigned int Shader::getUniform(const char *)
 {
 	return 0;

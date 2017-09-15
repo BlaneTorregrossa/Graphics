@@ -1,5 +1,3 @@
-﻿  Application.cpp
-c:\users\s178064\documents\github\graphics\introtoopengl\application.cpp(57): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+﻿  main.cpp
   IntroToOpenGL.vcxproj -> C:\Users\s178064\Documents\GitHub\Graphics\Debug\IntroToOpenGL.exe
   IntroToOpenGL.vcxproj -> C:\Users\s178064\Documents\GitHub\Graphics\Debug\IntroToOpenGL.pdb (Partial PDB)
