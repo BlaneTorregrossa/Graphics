@@ -1,5 +1,6 @@
 #include "Shader.h"
 
+// 
 
 Shader::Shader()
 {
@@ -21,14 +22,8 @@ void Shader::startup()
 
 void Shader::shutdown()
 {
-}
-
-void Shader::update(float)
-{
-}
-
-void Shader::draw()
-{
+	glDeleteShader(fragmentShader);
+	glDeleteShader(vertexShader);
 }
 
 void Shader::bind()
@@ -55,9 +50,6 @@ void Shader::defaultLoad()
 				in vec4 vColour; \
 				out vec4 fragColor; \
 				void main() { fragColor = vColour; }";
-
-	glDeleteShader(fragmentShader);
-	glDeleteShader(vertexShader);
 }
 
 //*

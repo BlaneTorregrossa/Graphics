@@ -17,6 +17,7 @@ void RenderingApp::generateGrid(unsigned int rows, unsigned int cols)
 	unsigned int* auiIndices = new unsigned int[(rows - 1) * (cols - 1) * 6];
 	Vertex* aoVerticies = new Vertex[rows * cols];
 
+	//!!!
 	for (unsigned int r = 0; r < rows; ++r)
 	{
 		for (unsigned int c = 0; c < cols; ++c)
@@ -28,6 +29,7 @@ void RenderingApp::generateGrid(unsigned int rows, unsigned int cols)
 		}
 	}
 
+	//!!!
 	unsigned int index = 0;
 	for (unsigned int r = 0; r < (rows - 1); ++r)
 	{
@@ -42,5 +44,13 @@ void RenderingApp::generateGrid(unsigned int rows, unsigned int cols)
 			auiIndices[index++] = r * cols + (c + 1);
 		}
 	}
+}
+
+void RenderingApp::startup()
+{
+}
+
+void RenderingApp::shutdown()
+{
 }
 

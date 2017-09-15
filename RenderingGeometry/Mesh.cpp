@@ -81,10 +81,10 @@ void Mesh::update(float)
 }
 
 //*
-void Mesh::draw(GLuint num)
+void Mesh::draw(int num)
 {
-	bind();
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-	glDrawElements(num, index_Count, GL_UNSIGNED_INT, 0);
-	unbind();
+	//bind();
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	//glDrawElements(num, index_Count, GL_UNSIGNED_INT, 0);
+	//unbind();
 }

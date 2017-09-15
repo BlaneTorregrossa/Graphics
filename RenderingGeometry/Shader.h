@@ -19,13 +19,12 @@ public:
 	~Shader();
 	void startup();		
 	void shutdown();
-	void update(float);
-	void draw();
 	void bind();		
 	void unbind();
 	void defaultLoad();
 	void load(const char * filename, unsigned int type);
 	void attach();		//attatchment of the shaders to the program
+
 	unsigned int getUniform(const char *);
 	unsigned int m_program;
 	const char* vsSource;	//Vertex Shader

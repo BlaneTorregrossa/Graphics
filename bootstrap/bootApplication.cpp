@@ -34,8 +34,6 @@ void bootApplication::run(const char * title, unsigned int width, unsigned int h
 
 	if (ogl_LoadFunctions() == ogl_LOAD_FAILED) //Load OpenGL functions and if it can't the program is terminated.
 	{
-		glfwDestroyWindow(m_window);
-		glfwTerminate();
 		return;
 	}
 
@@ -54,10 +52,8 @@ void bootApplication::run(const char * title, unsigned int width, unsigned int h
 		deltaTime = currTime - prevTime;  // deltaTime set to equal the change of time between current time and the previous time
 		prevTime = currTime; // Updates prevTime
 		update(deltaTime);
-		draw();
 		glfwPollEvents(); // processes all events
 		glfwSwapBuffers(m_window); // Swaps the front and back buffers of the window
-		m_check = m_check || glfwWindowShouldClose(m_window) == GLFW_TRUE;
 	}
 	
 	glfwDestroyWindow(m_window);
@@ -66,5 +62,9 @@ void bootApplication::run(const char * title, unsigned int width, unsigned int h
 }
 
 void bootApplication::update(float)
+{
+}
+
+void bootApplication::draw()
 {
 }

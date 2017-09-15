@@ -15,8 +15,6 @@ public:
 	void generateGrid(unsigned int m_rows, unsigned int m_columns);
 	void startup();
 	void shutdown();
-	void update(float);
-	void draw();
 
 protected:
 	// vertex and index buffers (for generating geometry)

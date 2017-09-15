@@ -28,7 +28,7 @@ public:
 	void startup();
 	void shutdown();
 	void update(float);
-	void draw(GLuint);
+	void draw(int);
 	unsigned int index_Count;		
 	unsigned int vertex_Count;	
 
