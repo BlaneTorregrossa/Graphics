@@ -11,6 +11,22 @@ InheritanceApp::~InheritanceApp()
 {
 }
 
+void InheritanceApp::startup()
+{
+}
+
+void InheritanceApp::shutdown()
+{
+}
+
+void InheritanceApp::update(float)
+{
+}
+
+void InheritanceApp::draw()
+{
+}
+
 void InheritanceApp::run(const char * title, unsigned int width, unsigned int height, bool fullscreen)
 {
 	bootApplication::run(title, width, height, fullscreen);

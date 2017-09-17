@@ -14,5 +14,5 @@ int main()
 {
 	bootApplication* app = new RenderingApp();
 	app->run("Rendering shapes", 1280, 720, false);
-	return 1;
+	delete app;
 }

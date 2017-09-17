@@ -17,10 +17,15 @@ class Shader
 public:
 	Shader();
 	~Shader();
+
 	void startup();		
 	void shutdown();
+	void update(float);
+	void draw();
+
 	void bind();		
 	void unbind();
+
 	void defaultLoad();
 	void load(const char * filename, unsigned int type);
 	void attach();		//attatchment of the shaders to the program
@@ -31,7 +36,7 @@ public:
 	const char* fsSource;	//Fragment Shader
 
 private:
-	unsigned int success;			// a check for a loop
+	int success;			// a check for a loop
 	unsigned int vertexShader;		// vertexShader 
 	unsigned int fragmentShader;	// fragmentShader
 };

@@ -8,5 +8,10 @@ public:
 	InheritanceApp();  //constructor for class
 	~InheritanceApp(); //destructor for class
 
+	virtual void startup() override;
+	virtual void shutdown() override;
+	virtual void update(float) override;
+	virtual void draw() override;
+
 	virtual void run(const char* title, unsigned int width, unsigned int height, bool fullscreen); // function for the application running
 };

@@ -1,3 +1,3 @@
-﻿  main.cpp
-  IntroToOpenGL.vcxproj -> C:\Users\s178064\Documents\GitHub\Graphics\Debug\IntroToOpenGL.exe
-  IntroToOpenGL.vcxproj -> C:\Users\s178064\Documents\GitHub\Graphics\Debug\IntroToOpenGL.pdb (Partial PDB)
+﻿LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  IntroToOpenGL.vcxproj -> C:\Users\Blane\Documents\Visual Studio 2015\Projects\IntroToOpenGL\Debug\IntroToOpenGL.exe
+  IntroToOpenGL.vcxproj -> C:\Users\Blane\Documents\Visual Studio 2015\Projects\IntroToOpenGL\Debug\IntroToOpenGL.pdb (Partial PDB)

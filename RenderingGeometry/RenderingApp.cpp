@@ -11,39 +11,62 @@ RenderingApp::~RenderingApp()
 {
 }
 
-//*
+
 void RenderingApp::generateGrid(unsigned int rows, unsigned int cols)
 {
-	unsigned int* auiIndices = new unsigned int[(rows - 1) * (cols - 1) * 6];
-	Vertex* aoVerticies = new Vertex[rows * cols];
+}
 
-	//!!!
-	for (unsigned int r = 0; r < rows; ++r)
-	{
-		for (unsigned int c = 0; c < cols; ++c)
-		{
-			aoVerticies[r * cols + c].position = glm::vec4((float)c, 0, (float)r, 1);
+void RenderingApp::generatePlane()
+{
+	Vertex a = { glm::vec4(0, 0, 0, 1), glm::vec4(.1, .1, .1, 1) };
+	Vertex b = { glm::vec4(3, 0, 0, 1), glm::vec4(.1, .1, .1, 1) };
+	Vertex c = { glm::vec4(3, 0, 0, 1), glm::vec4(.1, .1, .1, 1) };
+	Vertex d = { glm::vec4(0, 0, 0, 1), glm::vec4(.1, .1, .1, 1) };
 
-			glm::vec3 colour = glm::vec3(sinf((c / (float)(cols - 1)) * (r / (float)(rows - 1))));
-			aoVerticies[r * cols + c].colour = glm::vec4(colour, 1);
-		}
-	}
+	vertices = new Vertex[4];
+	vertices[0] = a;
+	vertices[1] = b;
+	vertices[2] = c;
+	vertices[3] = d;
 
-	//!!!
-	unsigned int index = 0;
-	for (unsigned int r = 0; r < (rows - 1); ++r)
-	{
-		for (unsigned int c = 0; c < (cols - 1); ++c)
-		{
-			auiIndices[index++] = r * cols + c;
-			auiIndices[index++] = (r + 1) * cols + c;
-			auiIndices[index++] = (r + 1) * cols + (c + 1);
+	unsigned int indices[6] = { 0, 1, 2, 0, 2, 3};
+	unsigned int vertAmount = 4;
+	unsigned int indicesAmount = 6;
 
-			auiIndices[index++] = r * cols + c;
-			auiIndices[index++] = (r + 1) * cols + (c + 1);
-			auiIndices[index++] = r * cols + (c + 1);
-		}
-	}
+	Mesh* createPlane = new Mesh();
+	createPlane->Create_buffers();
+}
+
+void RenderingApp::generateCube()
+{
+	Vertex a = { glm::vec4(-1, 0, 0, 1), glm::vec4(.20, .20, .20, 1) }; 
+	Vertex b = { glm::vec4(0, 0, 0, 1), glm::vec4(.20, .20, .20, 1) };	
+	Vertex c = { glm::vec4(0, 1, 0, 1), glm::vec4(.20, .20, .20, 1) };	
+	Vertex d = { glm::vec4(-1, 1, 0, 1), glm::vec4(.20, .20, .20, 1) };	
+
+	Vertex e = { glm::vec4(-1, 0, -1, 1), glm::vec4(.20, .20, .20, 1) }; 
+	Vertex f = { glm::vec4(0, 0, -1, 1), glm::vec4(.20, .20, .20, 1) };	
+	Vertex g = { glm::vec4(0, 1, -1, 1), glm::vec4(.20, .20, .20, 1) };	
+	Vertex h = { glm::vec4(-1, 1, -1, 1), glm::vec4(.20, .20, .20, 1) }; 
+
+	vertices = new Vertex[8];
+	vertices[0] = a;
+	vertices[1] = b;
+	vertices[2] = c;
+	vertices[3] = d;
+	vertices[4] = e;
+	vertices[5] = f;
+	vertices[6] = g;
+	vertices[7] = h;
+
+	unsigned int indices[36] = { 
+									
+	};
+	unsigned int vertAmount = 8;
+	unsigned int indicesAmount = 36;
+
+	Mesh* createCube = new Mesh();
+	createCube->Create_buffers();
 }
 
 void RenderingApp::startup()
@@ -51,6 +74,14 @@ void RenderingApp::startup()
 }
 
 void RenderingApp::shutdown()
+{
+}
+
+void RenderingApp::update(float)
+{
+}
+
+void RenderingApp::draw()
 {
 }
 
