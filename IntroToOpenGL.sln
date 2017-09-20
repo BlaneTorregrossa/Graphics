@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntroToOpenGL", "IntroToOpenGL\IntroToOpenGL.vcxproj", "{AB8D7A55-84F4-454F-8950-D1BF1A786585}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bootstrap", "bootstrap\bootstrap.vcxproj", "{C8110A17-4B14-4547-A76C-EDFF1F9E6A66}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CameraAndProjection", "CameraAndProjection\CameraAndProjection.vcxproj", "{D758EE9A-723C-47A4-A1C3-EB7635B067FB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DirectLighting", "DirectLighting\DirectLighting.vcxproj", "{5F02A2BF-F9F4-479B-BFC6-C9D9869ABC18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,14 @@ Global
 		{D758EE9A-723C-47A4-A1C3-EB7635B067FB}.Release|x64.Build.0 = Release|x64
 		{D758EE9A-723C-47A4-A1C3-EB7635B067FB}.Release|x86.ActiveCfg = Release|Win32
 		{D758EE9A-723C-47A4-A1C3-EB7635B067FB}.Release|x86.Build.0 = Release|Win32
+		{5F02A2BF-F9F4-479B-BFC6-C9D9869ABC18}.Debug|x64.ActiveCfg = Debug|x64
+		{5F02A2BF-F9F4-479B-BFC6-C9D9869ABC18}.Debug|x64.Build.0 = Debug|x64
+		{5F02A2BF-F9F4-479B-BFC6-C9D9869ABC18}.Debug|x86.ActiveCfg = Debug|Win32
+		{5F02A2BF-F9F4-479B-BFC6-C9D9869ABC18}.Debug|x86.Build.0 = Debug|Win32
+		{5F02A2BF-F9F4-479B-BFC6-C9D9869ABC18}.Release|x64.ActiveCfg = Release|x64
+		{5F02A2BF-F9F4-479B-BFC6-C9D9869ABC18}.Release|x64.Build.0 = Release|x64
+		{5F02A2BF-F9F4-479B-BFC6-C9D9869ABC18}.Release|x86.ActiveCfg = Release|Win32
+		{5F02A2BF-F9F4-479B-BFC6-C9D9869ABC18}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
